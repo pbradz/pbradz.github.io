@@ -331,9 +331,6 @@ kable(cbind(descriptions=ko.descs[rownames(mgs.reads.table)[1:5], ], mgs.reads.t
 
 all.afls &lt;- read.csv(&quot;data/all-afls.csv&quot;, header = TRUE, row.names = 1)
 
-# TODO: This is already normalized, I need to get raw count data so I can go through that part
-# mgs.abundances.table &lt;- t(read.table(&quot;data/MGS/Abundances.tab&quot;, sep = &quot; &quot;, header = TRUE, row.names = 1))
-
 # reading metadata; we also reorder the factor levels here so that &quot;healthy&quot; is the first one (we'll see why later)
 mgs.metadata &lt;- read.table(&quot;data/MGS/Metadata-Diversity.tab&quot;, sep = &quot; &quot;, header = TRUE, row.names = 1)
 mgs.metadata$health_state &lt;- factor(mgs.metadata$health_state, c(&quot;healthy&quot;, &quot;crohns_disease&quot;, &quot;ulcerative_colitis&quot;))
